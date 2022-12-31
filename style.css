@@ -51,14 +51,11 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
-  transition: all 0.4s ease-in-out;
 }
-
-.wrapper:hover {
+/* .wrapper:hover {
   scale: 1.01;
   box-shadow: 0 0 3rem 0.2rem rgba(0, 0, 0, 0.42);
-}
+} */
 
 .subsription-heading,
 .why-heading {
@@ -120,7 +117,9 @@ body {
   color: hsl(204, 43%, 93%);
   opacity: 0.8;
 }
-.btn {
+
+.btn:link,
+.btn:visited {
   background-color: hsl(71, 73%, 54%);
   color: hsl(204, 43%, 93%);
   text-decoration: none;
@@ -131,9 +130,15 @@ body {
   padding-inline: 2.8rem;
   min-width: 100%;
   border-radius: 4px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
-
   margin-top: 3.2rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  /* overflow: hidden; */
+}
+.btn:hover,
+.btn:active {
+  scale: 1.01;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 /***************/
