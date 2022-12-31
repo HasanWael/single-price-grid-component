@@ -1,0 +1,189 @@
+/* 'KARLA' Google-Font */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+/* LET"S START AGAIN (THIRD TIME) */
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  font-size: 1.6rem;
+  font-family: "Karla", sans-serif;
+}
+
+.box-padding {
+  padding: 3.2rem 4rem;
+}
+
+/* You can give the parent a display grid or flex and set margin to auto in the child, the child will get margin auto all around now just left and right as it in a parent with display set to block */
+
+/* The parent */
+.container {
+  /* border: 5px solid red; */
+  min-height: 100vh;
+  display: flex;
+}
+
+/* The child */
+.wrapper {
+  /* border: 5px dotted blue; */
+  border-radius: 5px;
+  box-shadow: 0 0 3rem 0.2rem rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  transition: all 0.4s ease-in-out;
+}
+
+.wrapper:hover {
+  scale: 1.01;
+  box-shadow: 0 0 3rem 0.2rem rgba(0, 0, 0, 0.42);
+}
+
+.subsription-heading,
+.why-heading {
+  margin-bottom: 2rem;
+}
+
+/***************/
+/* JOIN BOX */
+/***************/
+.join {
+  grid-column: span 2;
+  /* grid-column: 1 / -1; */
+}
+.join-heading {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 2.4rem;
+  letter-spacing: 0.3px;
+}
+.join-guarantee {
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+  margin-bottom: 1.2rem;
+}
+.join-text {
+  line-height: 1.5;
+  color: hsl(218, 22%, 67%);
+}
+
+/***************/
+/* SUBSCRIPTION BOX */
+/***************/
+.subsription {
+  background-color: hsl(179, 62%, 43%);
+}
+.subsription-heading {
+  font-size: 1.6rem;
+  color: hsl(204, 43%, 93%);
+  font-weight: 700;
+  /* letter-spacing: 0.5px; */
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.price .num {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: hsl(204, 43%, 93%);
+}
+.price .per {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.6;
+}
+.subscribtion-text {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.8;
+}
+.btn {
+  background-color: hsl(71, 73%, 54%);
+  color: hsl(204, 43%, 93%);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  padding-block: 1.4rem;
+  padding-inline: 2.8rem;
+  min-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+
+  margin-top: 3.2rem;
+}
+
+/***************/
+/* WHY US BOX */
+/***************/
+.why {
+  background-color: hsla(179, 62%, 43%, 0.757);
+}
+.why-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(204, 43%, 93%);
+}
+.why-list {
+  font-size: 1.3rem;
+  color: hsl(204, 43%, 93%);
+  opacity: 0.7;
+  list-style: none;
+  line-height: 1.5;
+}
+
+/* ***************** */
+/* MEDIA QUERY (375px) */
+/* /////////////////// */
+
+@media (max-width: 23.5em) {
+  .container {
+    margin-block: 5rem;
+    margin-inline: 2.5rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .join {
+    grid-column: 1;
+  }
+
+  .join-heading {
+    margin-bottom: 2rem;
+  }
+
+  .join-guarantee {
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+  }
+
+  .join-text {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+}
