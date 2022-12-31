@@ -32,7 +32,7 @@ body {
   padding: 3.2rem 4rem;
 }
 
-/* You can give the parent a display grid or flex and set margin to auto in the child, the child will get margin auto all around now just left and right as it in a parent with display set to block */
+/* You can give the parent a display grid or flex and set margin to auto in the child, the child will get margin auto all around, not just left and right as it in a parent with display set to block */
 
 /* The parent */
 .container {
